@@ -1,1 +1,1 @@
-# angular-project
+# A simple Angular Project
