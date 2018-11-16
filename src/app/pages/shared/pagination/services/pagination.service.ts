@@ -4,7 +4,7 @@ import { PaginationModel } from '../models/pagination.model';
 @Injectable({
   providedIn: 'root'
 })
-export class PaginationnService {
+export class PaginationService {
 
   constructor() { }
 
