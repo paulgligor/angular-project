@@ -1,1 +1,1 @@
-# A simple Angular Project
+# A simple Angular 7 Project Example
