@@ -6,19 +6,22 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './shared/header/components/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { CountriesComponent } from './countries/countries.component';
 import { PaginationComponent } from './shared/pagination/components/pagination.component';
-import { CountryComponent } from './countries/country/country.component';
 import { PaginationService } from './shared/pagination/services/pagination.service';
+
+import { PagedListComponent } from './lists/paged-list/paged-list.component';
+import { SimpleListComponent } from './lists/simple-list/simple-list.component';
+import { FilteredListComponent } from './lists/filtered-list/filtered-list.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    CountriesComponent,
+    SimpleListComponent,
     PaginationComponent,
-    CountryComponent
+    PagedListComponent,
+    FilteredListComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +35,9 @@ import { PaginationService } from './shared/pagination/services/pagination.servi
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    CountriesComponent,
-    PaginationComponent
+    SimpleListComponent,
+    PaginationComponent,
+    PagedListComponent
   ]
 })
 export class PagesModule { }

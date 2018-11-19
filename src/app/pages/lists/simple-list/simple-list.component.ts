@@ -3,11 +3,11 @@ import { CountryService } from 'src/app/core/services/country/country.service';
 import { CountryModel } from 'src/app/core/models/country.model';
 
 @Component({
-  selector: 'app-countries',
-  templateUrl: './countries.component.html',
-  styleUrls: ['./countries.component.scss']
+  selector: 'app-simple-list',
+  templateUrl: './simple-list.component.html',
+  styleUrls: ['./simple-list.component.scss']
 })
-export class CountriesComponent implements OnInit {
+export class SimpleListComponent implements OnInit {
 
   public countriesList: CountryModel[] = new Array();
 
