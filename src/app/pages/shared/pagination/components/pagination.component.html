@@ -1,9 +1,29 @@
-<nav class="d-flex justify-content-center">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
+<div class="row">
+  <div class="col-md-2">
+    <nav class="d-flex justify-content-start">
+      {{pager.pageSize * pager.currentPage}} of {{pager.totalItems}}
+    </nav>
+  </div>
+  <div class="col-md-8">
+    <nav class="d-flex justify-content-center">
+      <ul class="pagination">
+        <li class="page-item" (click)="changePage(pager.currentPage - 1)">
+            <button class="page-link" [disabled]="pager.currentPage === 1">Previous</button>
+        </li>
+
+        <li class="page-item" *ngFor="let page of [1, 2, 3, 4]">
+          <a class="page-link" (click)="changePage(page)">{{ page }}</a>
+        </li>
+
+        <li class="page-item" (click)="changePage(pager.currentPage + 1)">
+          <button class="page-link" [disabled]="pager.currentPage === pager.totalPages">Next</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-md-2">
+    <nav class="d-flex justify-content-end">
+      Total pages {{pager.totalPages}}
+    </nav>
+  </div>
+</div>
