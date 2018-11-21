@@ -12,6 +12,7 @@ import { PaginationService } from './shared/pagination/services/pagination.servi
 import { PagedListComponent } from './lists/paged-list/paged-list.component';
 import { SimpleListComponent } from './lists/simple-list/simple-list.component';
 import { FilteredListComponent } from './lists/filtered-list/filtered-list.component';
+import { InfiniteScrollingListComponent } from './lists/infinite-scrolling-list/infinite-scrolling-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FilteredListComponent } from './lists/filtered-list/filtered-list.compo
     SimpleListComponent,
     PaginationComponent,
     PagedListComponent,
-    FilteredListComponent
+    FilteredListComponent,
+    InfiniteScrollingListComponent
   ],
   imports: [
     BrowserModule,
