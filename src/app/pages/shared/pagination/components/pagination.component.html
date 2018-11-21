@@ -7,16 +7,24 @@
   <div class="col-md-8">
     <nav class="d-flex justify-content-center">
       <ul class="pagination">
-        <li class="page-item" (click)="changePage(pager.currentPage - 1)">
-            <button class="page-link" [disabled]="pager.currentPage === 1">Previous</button>
+        <li class="page-item" [ngClass]="{ 'disabled' : pager.currentPage === 1 }">
+            <button class="page-link"
+            [disabled]="pager.currentPage === 1"
+            (click)="changePage(pager.currentPage - 1)">
+              Previous
+            </button>
         </li>
 
         <li class="page-item" *ngFor="let page of getLength()" [ngClass]="{ 'active' : page === pager.currentPage }" >
           <a class="page-link" (click)="changePage(page)">{{ page }}</a>
         </li>
 
-        <li class="page-item" (click)="changePage(pager.currentPage + 1)">
-          <button class="page-link" [disabled]="pager.currentPage === pager.totalPages">Next</button>
+        <li class="page-item" [ngClass]="{ 'disabled' : pager.currentPage === pager.totalPages }">
+          <button class="page-link"
+          (click)="changePage(pager.currentPage + 1)"
+          [disabled]="pager.currentPage === pager.totalPages">
+            Next
+          </button>
         </li>
       </ul>
     </nav>
