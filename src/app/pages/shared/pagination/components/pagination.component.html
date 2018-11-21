@@ -11,7 +11,7 @@
             <button class="page-link" [disabled]="pager.currentPage === 1">Previous</button>
         </li>
 
-        <li class="page-item" *ngFor="let page of [1, 2, 3, 4]">
+        <li class="page-item" *ngFor="let page of getLength()" [ngClass]="{ 'active' : page === pager.currentPage }" >
           <a class="page-link" (click)="changePage(page)">{{ page }}</a>
         </li>
 
