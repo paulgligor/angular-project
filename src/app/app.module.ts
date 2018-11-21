@@ -5,7 +5,7 @@ import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 // Components
-import { AppComponent } from './pages/app-component/app.component';
+import { AppComponent } from './app-component/app.component';
 
 @NgModule({
   declarations: [

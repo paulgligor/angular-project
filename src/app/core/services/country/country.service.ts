@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ManagerService } from '../manager.service';
+import { ApiManagerService } from '../api-manager.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry, map } from 'rxjs/operators';
@@ -9,7 +9,7 @@ import { CountryModel } from '../../models/country.model';
 @Injectable({
   providedIn: 'root'
 })
-export class CountryService extends ManagerService {
+export class CountryService extends ApiManagerService {
 
   constructor(protected http: HttpClient) {
     super(http);

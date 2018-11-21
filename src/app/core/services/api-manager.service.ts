@@ -5,7 +5,7 @@ import { throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ManagerService {
+export class ApiManagerService {
 
   protected urls = {
     country: {

@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
-import { ManagerService } from './services/manager.service';
+import { ApiManagerService } from './services/api-manager.service';
 import { CountryService } from './services/country/country.service';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { CountryService } from './services/country/country.service';
   ],
   declarations: [],
   providers: [
-    ManagerService,
+    ApiManagerService,
     CountryService
   ]
 })
