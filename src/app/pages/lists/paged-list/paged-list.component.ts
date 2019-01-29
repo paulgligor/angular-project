@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CountryService } from 'src/app/core/services/country/country.service';
-import { CountryModel } from 'src/app/core/models/country.model';
+import { CountryService } from '../../../core/services/country/country.service';
+import { CountryModel } from '../../../core/models/country.model';
 import { PaginationModel } from '../../shared/pagination/models/pagination.model';
 import { PaginationService } from '../../shared/pagination/services/pagination.service';
 
@@ -16,13 +16,15 @@ export class PagedListComponent implements OnInit {
   public pagedItems: CountryModel[] = new Array();
   public pageSize: number = 10;
 
-  constructor(private countryService: CountryService, private paginationService: PaginationService) { }
+  constructor(
+    private countryService: CountryService, 
+    private paginationService: PaginationService) { }
 
   ngOnInit() {
     this.getList();
   }
 
-  private getList() {
+  private getList() {    
     this.countryService.getList().subscribe(result => {
       this.listItems = result;
       this.pager = this.paginationService.getPager(this.listItems.length, this.pageSize);
