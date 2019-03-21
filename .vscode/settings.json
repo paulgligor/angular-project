@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/c5267bd1-5db9-4293-9982-72382b14f893/resourceGroups/PaulResource/providers/Microsoft.Web/sites/example-project-angular-7",
+    "appService.deploySubpath": "dist\\angular-project"
+}

@@ -12,7 +12,7 @@ import { AppComponent } from './app-component/app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'angular-project' }),
     AppRoutingModule,
     CoreModule,
     PagesModule
